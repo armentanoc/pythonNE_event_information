@@ -12,12 +12,12 @@ import org.w3c.dom.Text;
 public class ViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
-    TextView nameView, eventTypeView, localView, dateView;
+    TextView nameView, typeView, localView, dateView;
     public ViewHolder(@NonNull View itemView) {
         super(itemView);
         imageView = itemView.findViewById(R.id.imageview);
         nameView = itemView.findViewById(R.id.name);
-        eventTypeView = itemView.findViewById(R.id.event_type);
+        typeView = itemView.findViewById(R.id.type);
         localView = itemView.findViewById(R.id.local);
         dateView = itemView.findViewById(R.id.date);
     }

@@ -30,7 +30,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.nameView.setText(items.get(position).getName());
-        holder.eventTypeView.setText(items.get(position).getEventType());
+        holder.typeView.setText(items.get(position).getType());
         holder.localView.setText(items.get(position).getLocal());
         holder.dateView.setText(items.get(position).getDate());
         holder.imageView.setImageResource(items.get(position).getImage());

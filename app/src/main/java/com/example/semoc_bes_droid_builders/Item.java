@@ -1,21 +1,42 @@
 package com.example.semoc_bes_droid_builders;
 
+import android.os.Build;
+
+//import androidx.annotation.RequiresApi;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+
 public class Item {
 
     String name;
-    String eventType;
+    String type;
     String date;
+    //LocalDate date;
     String local;
     int image;
 
     //Constructor
-    public Item(String name, String eventType, String local, String date, int image) {
-        this.eventType = eventType;
+
+    public Item(String name, String type, String local, String date, int image) {
+        this.type = type;
         this.date = date;
         this.name = name;
         this.local = local;
         this.image = image;
     }
+
+    /*
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public Item(String name, String type, String local, String date, int image) {
+        this.type = type;
+        LocalDate localDate = LocalDate.parse(date);
+        this.date = localDate;
+        this.name = name;
+        this.local = local;
+        this.image = image;
+    }*/
 
     //Getters and setters
     public String getName() {
@@ -34,12 +55,12 @@ public class Item {
         this.image = image;
     }
 
-    public String getEventType() {
-        return eventType;
+    public String getType() {
+        return type;
     }
 
-    public void setEventType(String eventType) {
-        this.eventType = eventType;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getDate() {
@@ -49,6 +70,18 @@ public class Item {
     public void setDate(String date) {
         this.date = date;
     }
+
+    /*
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public String getDate() {
+        return date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public void setDate(String date) {
+        this.date = LocalDate.parse(date);
+    }
+    */
 
     public String getLocal() {
         return local;

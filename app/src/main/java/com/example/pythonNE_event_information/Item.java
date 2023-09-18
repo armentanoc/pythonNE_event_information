@@ -10,49 +10,30 @@ import java.util.Date;
 
 public class Item {
 
-    String name;
-    String type;
-    String date;
-    //LocalDate date;
-    String local;
-    int image;
+    String title, type, language,start, duration, strRoom, url, strAbstract, personName, personBiography, date;
+    int placeholder;
 
-    //Constructor
-
-    public Item(String name, String type, String local, String date, int image) {
+    public Item(String title, String type, String language, String start, String duration, String strRoom, String url, String strAbstract, String personName, String personBiography, Date date, int placeholder) {
+        this.title = title;
         this.type = type;
+        this.language = language;
+        this.start = start;
+        this.duration = duration;
+        this.strRoom = strRoom;
+        this.url = url;
+        this.strAbstract = strAbstract;
+        this.personName = personName;
+        this.personBiography = personBiography;
         this.date = date;
-        this.name = name;
-        this.local = local;
-        this.image = image;
+        this.placeholder = placeholder;
     }
 
-    /*
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public Item(String name, String type, String local, String date, int image) {
-        this.type = type;
-        LocalDate localDate = LocalDate.parse(date);
-        this.date = localDate;
-        this.name = name;
-        this.local = local;
-        this.image = image;
-    }*/
-
-    //Getters and setters
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
-        this.image = image;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getType() {
@@ -63,6 +44,70 @@ public class Item {
         this.type = type;
     }
 
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getStart() {
+        return start;
+    }
+
+    public void setStart(String start) {
+        this.start = start;
+    }
+
+    public String getDuration() {
+        return duration;
+    }
+
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+
+    public String getStrRoom() {
+        return strRoom;
+    }
+
+    public void setStrRoom(String strRoom) {
+        this.strRoom = strRoom;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getStrAbstract() {
+        return strAbstract;
+    }
+
+    public void setStrAbstract(String strAbstract) {
+        this.strAbstract = strAbstract;
+    }
+
+    public String getPersonName() {
+        return personName;
+    }
+
+    public void setPersonName(String personName) {
+        this.personName = personName;
+    }
+
+    public String getPersonBiography() {
+        return personBiography;
+    }
+
+    public void setPersonBiography(String personBiography) {
+        this.personBiography = personBiography;
+    }
+
     public String getDate() {
         return date;
     }
@@ -71,24 +116,12 @@ public class Item {
         this.date = date;
     }
 
-    /*
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public String getDate() {
-        return date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    public int getPlaceholder() {
+        return placeholder;
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
-    public void setDate(String date) {
-        this.date = LocalDate.parse(date);
-    }
-    */
-
-    public String getLocal() {
-        return local;
-    }
-
-    public void setLocal(String local) {
-        this.local = local;
+    public void setPlaceholder(int placeholder) {
+        this.placeholder = placeholder;
     }
 
 }

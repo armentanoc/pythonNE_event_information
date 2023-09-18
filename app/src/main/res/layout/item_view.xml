@@ -14,45 +14,122 @@
         />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/titleview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_toEndOf="@+id/imageview"
         android:fontFamily="@font/circularstdbold"
         android:textColor="@color/medium_blue"
-        tools:text="Name" />
+        tools:text="Title" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/type"
+        android:id="@+id/typeview"
         android:fontFamily="@font/circularstdmedium"
         android:textColor="@color/black"
         android:layout_toEndOf="@+id/imageview"
-        android:layout_below="@+id/name"
+        android:layout_below="@+id/titleview"
         tools:text="Event Type"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/local"
-        android:fontFamily="@font/circularstdbook"
+        android:id="@+id/roomview"
+        android:fontFamily="@font/circularstdmedium"
         android:textColor="@color/black"
         android:layout_toEndOf="@+id/imageview"
-        android:layout_below="@+id/type"
-        tools:text="Local"
+        android:layout_below="@+id/typeview"
+        tools:text="Event Room"
         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/date"
+        android:id="@+id/startview"
+        android:fontFamily="@font/circularstdmedium"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/roomview"
+        tools:text="Start"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/durationview"
         android:fontFamily="@font/circularstdbook"
         android:textColor="@color/black"
         android:layout_toEndOf="@+id/imageview"
-        android:layout_below="@+id/local"
+        android:layout_below="@+id/startview"
+        tools:text="Duration"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/urlview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/durationview"
+        tools:text="URL"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/languageview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/urlview"
+        tools:text="Language"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/abstractview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/languageview"
+        tools:text="Abstract"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personnameview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/abstractview"
+        tools:text="Person Name"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/personbiographyview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/personnameview"
+        tools:text="Person Biography"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dateview"
+        android:fontFamily="@font/circularstdbook"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/imageview"
+        android:layout_below="@+id/personbiographyview"
         tools:text="Date"
         />
 

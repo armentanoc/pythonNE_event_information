@@ -1,4 +1,4 @@
-package com.example.semoc_bes_droid_builders;
+package com.example.pythonNE_event_information;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.semoc_bes_droid_builders"
+    namespace = "com.example.pythonNE_event_information"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.semoc_bes_droid_builders"
+        applicationId = "com.example.pythonNE_event_information"
         minSdk = 24
         targetSdk = 33
         versionCode = 1

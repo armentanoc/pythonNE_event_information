@@ -1,4 +1,4 @@
-package com.example.semoc_bes_droid_builders;
+package com.example.pythonNE_event_information;
 
 import android.view.View;
 import android.widget.ImageView;

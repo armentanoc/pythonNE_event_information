@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "semoc-bes-droid-builders"
+rootProject.name = "pythonNE_event_information"
 include(":app")

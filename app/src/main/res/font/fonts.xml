@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- regular -->
+    <font
+        android:font="@font/circularstdbook"
+        android:fontStyle="normal"
+        android:fontWeight="80"
+        />
+
+    <!-- medium -->
+    <font
+        android:font="@font/circularstdmedium"
+        android:fontStyle="normal"
+        android:fontWeight="80"
+        />
+
+    <!-- bold -->
+    <font
+        android:font="@font/circularstdbold"
+        android:fontStyle="normal"
+        android:fontWeight="80"
+        />
+
+</font-family>

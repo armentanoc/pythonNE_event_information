@@ -33,7 +33,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
         holder.typeView.setText(items.get(position).getType());
         holder.startView.setText(items.get(position).getStart());
         holder.durationView.setText(items.get(position).getDuration());
-        holder.dateView.setText(items.get(position).getDate());
+        holder.dateView.setText(items.get(position).getDateStr());
         holder.languageView.setText(items.get(position).getLanguage());
         holder.strRoomView.setText(items.get(position).getStrRoom());
         holder.urlView.setText(items.get(position).getUrl());

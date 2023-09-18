@@ -10,8 +10,10 @@ import java.util.Date;
 
 public class Item {
 
-    String title, type, language,start, duration, strRoom, url, strAbstract, personName, personBiography, date;
+    String title, type, language,start, duration, strRoom, url, strAbstract, personName, personBiography;
     int placeholder;
+
+    Date date;
 
     public Item(String title, String type, String language, String start, String duration, String strRoom, String url, String strAbstract, String personName, String personBiography, Date date, int placeholder) {
         this.title = title;
@@ -108,11 +110,11 @@ public class Item {
         this.personBiography = personBiography;
     }
 
-    public String getDate() {
-        return date;
+    public String getDateStr() {
+        return date.toString();
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 

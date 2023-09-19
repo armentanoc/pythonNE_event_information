@@ -17,7 +17,7 @@
         android:id="@+id/titleview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/circularstdbold"
         android:textColor="@color/medium_blue"
         tools:text="Title" />
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:id="@+id/horizontal_line"
+        android:id="@+id/time_information"
         android:layout_below="@+id/titleview">
 
         <TextView
@@ -58,25 +58,42 @@
             tools:text="Duration"
             />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/type_and_place_information"
+        android:layout_below="@id/time_information">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/typeview"
             android:fontFamily="@font/circularstdmedium"
             android:textColor="@color/black"
-            android:layout_marginStart="10dp"
             tools:text="Event Type"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/roomview"
+            android:fontFamily="@font/circularstdmedium"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            tools:text="Event Room"
             />
     </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/roomview"
-        android:fontFamily="@font/circularstdmedium"
+        android:id="@+id/abstractview"
+        android:fontFamily="@font/circularstdbook"
         android:textColor="@color/black"
-        android:layout_below="@+id/horizontal_line"
-        tools:text="Event Room"
+        android:layout_below="@+id/type_and_place_information"
+        android:layout_marginTop="10dp"
+        tools:text="Abstract"
         />
 
     <TextView
@@ -85,18 +102,8 @@
         android:id="@+id/urlview"
         android:fontFamily="@font/circularstdbook"
         android:textColor="@color/black"
-        android:layout_below="@+id/roomview"
+        android:layout_below="@+id/abstractview"
         tools:text="URL"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/abstractview"
-        android:fontFamily="@font/circularstdbook"
-        android:textColor="@color/black"
-        android:layout_below="@+id/urlview"
-        tools:text="Abstract"
         />
 
     <LinearLayout
@@ -104,16 +111,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:id="@+id/person_and_language"
-        android:layout_below="@+id/abstractview">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/personnameview"
-            android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/medium_blue"
-            tools:text="Person Name"
-            />
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/urlview">
 
         <TextView
             android:layout_width="wrap_content"
@@ -121,8 +120,17 @@
             android:id="@+id/languageview"
             android:fontFamily="@font/circularstdbold"
             android:textColor="@color/medium_blue"
-            android:layout_marginStart="10dp"
             tools:text="Language"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/personnameview"
+            android:fontFamily="@font/circularstdbold"
+            android:textColor="@color/medium_blue"
+            android:layout_marginStart="10dp"
+            tools:text="Person Name"
             />
 
     </LinearLayout>
@@ -131,7 +139,7 @@
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_below="@id/person_and_language"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="30dp"
         android:background="#DAD8D8"
         />
 

@@ -7,10 +7,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
-import java.util.Date;
-
 public class ViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imageView;
@@ -29,6 +25,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         urlView = itemView.findViewById(R.id.urlview);
         abstractView = itemView.findViewById(R.id.abstractview);
         personNameView = itemView.findViewById(R.id.personnameview);
-        personBiographyView = itemView.findViewById(R.id.personbiographyview);
+        //personBiographyView = itemView.findViewById(R.id.personbiographyview);
     }
 }

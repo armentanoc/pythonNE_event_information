@@ -39,8 +39,8 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
         holder.urlView.setText(items.get(position).getUrl());
         holder.abstractView.setText(items.get(position).getStrAbstract());
         holder.personNameView.setText(items.get(position).getPersonName());
-        holder.personBiographyView.setText(items.get(position).getPersonBiography());
         holder.imageView.setImageResource(items.get(position).getPlaceholder());
+        //holder.personBiographyView.setText(items.get(position).getPersonBiography());
     }
 
     @Override

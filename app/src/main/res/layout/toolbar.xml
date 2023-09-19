@@ -7,13 +7,14 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/main_toolbar"
         android:padding="16dp"
         android:theme="@style/ToolbarTheme">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/back_icon"
-            android:src="@drawable/arrow_back"
+            android:id="@+id/menu_left"
+            android:src="@menu/menu_left"
             android:layout_centerVertical="true"/>
         <TextView
             android:layout_width="wrap_content"
@@ -28,9 +29,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:id="@+id/menu_icon"
-            android:src="@drawable/menu"
+            android:src="@menu/menu_right"
             android:layout_centerVertical="true"/>
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_toolbar">
     </RelativeLayout>
 
 </RelativeLayout>

@@ -17,6 +17,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -53,8 +55,8 @@ public class MainActivity extends AppCompatActivity {
 
                 response -> { try {
 
-                    String title, type, language, start, duration, strRoom, url, slug, strAbstract, date;
-
+                    String title, type, language, start, duration, strRoom, url, slug, strAbstract, strDate;
+                    Date date = null;
                     JSONObject jsonObject = new JSONObject(response);
 
                     JSONArray days = jsonObject.getJSONObject("schedule")
@@ -80,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                                 strRoom = event.getString("room");
                                 url = event.getString("url");
                                 strAbstract = event.getString("abstract");
-                                date = event.getString("date");
+                                strDate = event.getString("date");
 
                                 JSONArray persons = event.getJSONArray("persons");
                                 List<String> personNames = new ArrayList<>();
@@ -95,8 +97,13 @@ public class MainActivity extends AppCompatActivity {
                                 //personPublicName = event.getString("title");
                                 //personBiography = event.getString("title");
 
-                                Date date_today = new Date(20230505);
-                                Item event_info = new Item(title, type, language, start, duration, strRoom, url, strAbstract, personNames.toString().replaceAll("[\\[\\]]", ""), "personBiography", date_today, R.drawable.placeholder);
+                                try {
+                                    date = new SimpleDateFormat("dd/MM/yyyy").parse(strDate);
+                                } catch (ParseException e) {
+                                    date = new Date();
+                                }
+
+                                Item event_info = new Item(title, type, language, start, duration, strRoom, url, strAbstract, personNames.toString().replaceAll("[\\[\\]]", ""), "personBiography", date);
                                 information.add(event_info);
                             }
                         }

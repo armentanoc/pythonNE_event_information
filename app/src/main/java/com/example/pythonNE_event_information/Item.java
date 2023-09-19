@@ -1,11 +1,9 @@
 package com.example.pythonNE_event_information;
 
-import android.os.Build;
-
 //import androidx.annotation.RequiresApi;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
+
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Item {
@@ -15,7 +13,7 @@ public class Item {
 
     Date date;
 
-    public Item(String title, String type, String language, String start, String duration, String strRoom, String url, String strAbstract, String personName, String personBiography, Date date, int placeholder) {
+    public Item(String title, String type, String language, String start, String duration, String strRoom, String url, String strAbstract, String personName, String personBiography, Date date) {
         this.title = title;
         this.type = type;
         this.language = language;
@@ -111,7 +109,8 @@ public class Item {
     }
 
     public String getDateStr() {
-        return date.toString();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        return formatter.format(date);
     }
 
     public void setDate(Date date) {

@@ -29,11 +29,18 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     //Bind the data to the view
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.nameView.setText(items.get(position).getName());
+        holder.titleView.setText(items.get(position).getTitle());
         holder.typeView.setText(items.get(position).getType());
-        holder.localView.setText(items.get(position).getLocal());
-        holder.dateView.setText(items.get(position).getDate());
-        holder.imageView.setImageResource(items.get(position).getImage());
+        holder.startView.setText(items.get(position).getStart());
+        holder.durationView.setText(items.get(position).getDuration());
+        holder.dateView.setText(items.get(position).getDateStr());
+        holder.languageView.setText(items.get(position).getLanguage());
+        holder.strRoomView.setText(items.get(position).getStrRoom());
+        holder.urlView.setText(items.get(position).getUrl());
+        holder.abstractView.setText(items.get(position).getStrAbstract());
+        holder.personNameView.setText(items.get(position).getPersonName());
+        //holder.imageView.setImageResource(items.get(position).getPlaceholder());
+        //holder.personBiographyView.setText(items.get(position).getPersonBiography());
     }
 
     @Override

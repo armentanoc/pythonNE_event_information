@@ -1,38 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/dark_blue">
+    android:background="@color/toolbar_background">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/main_toolbar"
-        android:padding="16dp"
         android:theme="@style/ToolbarTheme">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/menu_left"
             android:src="@menu/menu_left"
-            android:layout_centerVertical="true"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:tint="@color/toolbar_dark_grey"
+            android:layout_centerVertical="true"
+            tools:ignore="UseAppTint" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/pythonnelogo"
             android:text="@string/app_name"
-            android:textColor="@color/white"
-            android:textSize="15sp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"/>
+            android:padding="10dp"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:id="@+id/menu_icon"
             android:src="@menu/menu_right"
-            android:layout_centerVertical="true"/>
+            android:paddingRight="20dp"
+            android:tint="@color/toolbar_dark_grey"
+            android:layout_centerVertical="true"
+            tools:ignore="UseAppTint" />
 
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/main_toolbar"
+        android:background="@color/orange_line"
+        />
 
     <RelativeLayout
         android:id="@+id/search_bar"

@@ -1,7 +1,6 @@
 package com.example.pythonNE_event_information;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     List<Item> information = new ArrayList<>();
     RecyclerView recyclerView;
     Adapter adapter;
+    Date parsedDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // Você pode criar o adaptador vazio aqui e definir no RecyclerView
         adapter = new Adapter(getApplicationContext(), information);
         recyclerView.setAdapter(adapter);
 
@@ -45,9 +44,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void getData() {
 
+        //Python NE API
         String api = "https://pretalx.com/python-nordeste-2023/schedule/export/schedule.json";
 
-        // Instantiate the RequestQueue.
+        //Initializing date formatter
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssXXX");
+
+        // Instantiate the RequestQueue
         RequestQueue queue = Volley.newRequestQueue(this);
 
         // Request a string response from the provided URL.
@@ -56,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                 response -> { try {
 
                     String title, type, language, start, duration, strRoom, url, slug, strAbstract, strDate;
-                    Date date = null;
                     JSONObject jsonObject = new JSONObject(response);
 
                     JSONArray days = jsonObject.getJSONObject("schedule")
@@ -82,8 +84,22 @@ public class MainActivity extends AppCompatActivity {
                                 strRoom = event.getString("room");
                                 url = event.getString("url");
                                 strAbstract = event.getString("abstract");
+
+                                //Date Information
                                 strDate = event.getString("date");
 
+                                try {
+                                    // Parse the JSON string into a Date object
+                                    parsedDate = dateFormat.parse(strDate);
+
+                                    // Output the parsed date
+                                    System.out.println("Parsed Date: " + parsedDate.toString());
+
+                                } catch (ParseException e) {
+                                    Log.e("date", "getData: "+e.getLocalizedMessage());
+                                }
+
+                                //Person Information
                                 JSONArray persons = event.getJSONArray("persons");
                                 List<String> personNames = new ArrayList<>();
 
@@ -93,17 +109,10 @@ public class MainActivity extends AppCompatActivity {
                                     personNames.add(personName);
                                 }
 
-                                //date = event.getString("title");
-                                //personPublicName = event.getString("title");
-                                //personBiography = event.getString("title");
+                                //Creating Item object
+                                Item event_info = new Item(title, type, language, start, duration, strRoom, url, strAbstract, personNames.toString().replaceAll("[\\[\\]]", ""), "personBiography", parsedDate);
 
-                                try {
-                                    date = new SimpleDateFormat("dd/MM/yyyy").parse(strDate);
-                                } catch (ParseException e) {
-                                    date = new Date();
-                                }
-
-                                Item event_info = new Item(title, type, language, start, duration, strRoom, url, strAbstract, personNames.toString().replaceAll("[\\[\\]]", ""), "personBiography", date);
+                                //Adding object to List of Item objects
                                 information.add(event_info);
                             }
                         }

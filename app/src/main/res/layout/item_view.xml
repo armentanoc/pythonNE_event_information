@@ -20,7 +20,7 @@
         android:layout_marginTop="10dp"
         android:fontFamily="@font/circularstdbold"
         tools:text="Title"
-        android:textColorLink="@color/medium_blue"
+        android:textColorLink="@color/red"
         />
 
     <LinearLayout
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dateview"
             android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/black"
+            android:textColor="@color/medium_blue"
             tools:text="Date"
             />
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/startview"
             android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/black"
+            android:textColor="@color/medium_blue"
             android:layout_marginStart="10dp"
             tools:text="Start"
             />
@@ -54,7 +54,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/durationview"
             android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/black"
+            android:textColor="@color/medium_blue"
             android:layout_marginStart="10dp"
             tools:text="Duration"
             />
@@ -70,8 +70,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/typeview"
-            android:fontFamily="@font/circularstdmedium"
-            android:textColor="@color/black"
+            android:fontFamily="@font/circularstdbold"
+            android:textColor="@color/orange_line"
             tools:text="Event Type"
             />
 
@@ -79,8 +79,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/roomview"
-            android:fontFamily="@font/circularstdmedium"
-            android:textColor="@color/black"
+            android:fontFamily="@font/circularstdbold"
+            android:textColor="@color/orange_line"
             android:layout_marginStart="10dp"
             tools:text="Event Room"
             />
@@ -120,7 +120,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/languageview"
             android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/medium_blue"
+            android:textColor="@color/ciano_blue"
             tools:text="Language"
             />
 
@@ -129,7 +129,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/personnameview"
             android:fontFamily="@font/circularstdbold"
-            android:textColor="@color/medium_blue"
+            android:textColor="@color/ciano_blue"
             android:layout_marginStart="10dp"
             tools:text="Person Name"
             />
@@ -141,7 +141,7 @@
         android:layout_height="2dp"
         android:layout_below="@id/person_and_language"
         android:layout_marginTop="30dp"
-        android:background="#DAD8D8"
+        android:background="@color/orange_line"
         />
 
 </RelativeLayout>

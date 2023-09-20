@@ -1,8 +1,14 @@
 package com.example.pythonNE_event_information;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
+import android.net.Uri;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,5 +32,6 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         abstractView = itemView.findViewById(R.id.abstractview);
         personNameView = itemView.findViewById(R.id.personnameview);
         //personBiographyView = itemView.findViewById(R.id.personbiographyview);
+
     }
 }

@@ -4,18 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,11 +24,12 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SelectListener {
     List<Item> information = new ArrayList<>();
     RecyclerView recyclerView;
     Adapter adapter;
     Date parsedDate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new Adapter(getApplicationContext(), information);
+        adapter = new Adapter(this, information, this);
         recyclerView.setAdapter(adapter);
 
         getData();
@@ -127,4 +129,22 @@ public class MainActivity extends AppCompatActivity {
         queue.add(stringRequest);
     }
 
+    @Override
+    public void onItemClicked(Item item) {
+        String url = item.getUrl();
+        Uri uri = Uri.parse(url);
+        Toast.makeText(this, url, Toast.LENGTH_SHORT).show();
+
+        try {
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
+        } catch (Exception e) {
+            Toast.makeText(this, "Não foi possível abrir o link.", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
+    }
 }

@@ -19,8 +19,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:fontFamily="@font/circularstdbold"
-        android:textColor="@color/medium_blue"
-        tools:text="Title" />
+        tools:text="Title"
+        android:textColorLink="@color/medium_blue"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"

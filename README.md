@@ -1,4 +1,4 @@
-<h1 align="left"> Python NE Event Information - WIP</h1>
+<h1 align="left"> Python NE Event Information</h1>
 
 <a href='' target="_blank"><img alt='Android' src='https://img.shields.io/badge/Android-100000?style=modern&logo=Android&logoColor=white&labelColor=4caf50&color=4caf50'/></a>
 <a href='' target="_blank"><img alt='Android Studio' src='https://img.shields.io/badge/Android_Studio-100000?style=modern&logo=Android Studio&logoColor=white&labelColor=478af4&color=478af4'/></a>
@@ -6,11 +6,19 @@
 <a href='' target="_blank"><img alt='JSON' src='https://img.shields.io/badge/JSON-100000?style=modern&logo=JSON&logoColor=white&labelColor=161616&color=161616'/></a>
 <a href='' target="_blank"><img alt='java' src='https://img.shields.io/badge/Java-ED8B00?style=modern&logo=openjdk&logoColor=white'/></a>
 
-<p>This is an Android project that uses Android Studio and Gradle to create and build a Java application that consumes an API from Python Nordeste to display information related to the event.</p>
+<p>Android project that uses Android Studio and Gradle to create and build a Java application that consumes an API from Python Nordeste to display information related to the event in a RecyclerView. </p>
+
+<div align="center" display="flex">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/a005feb3-c386-4adb-a1df-3d51a8bb7a2b" height="500px">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/9f7bad7c-1cfe-4209-bf8c-61f30d540b37" height="500px">
+</div>
+
+
 
 ## Features
 
-- WIP
+- Click direciona à página original do evento
+- WIP: Filters
 
 ## Requires
 

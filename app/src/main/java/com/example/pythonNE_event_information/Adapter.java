@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.Date;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<ViewHolder> {
@@ -16,7 +17,6 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
     private Context context;
     private List<Item> items;
     private SelectListener listener;
-
     public Adapter(Context context, List<Item> items, SelectListener listener) {
         this.context = context;
         this.items = items;

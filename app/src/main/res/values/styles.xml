@@ -9,4 +9,9 @@
         <item name="android:fontFamily">@font/circularstdbold</item>
     </style>
 
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+            <!-- just override the colors used in the default style -->
+            <item name="colorOnPrimary">@color/white</item>
+            <item name="colorPrimary">@color/medium_blue</item>
+    </style>
 </resources>

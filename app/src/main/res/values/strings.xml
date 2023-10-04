@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Python NE Event Information</string>
+    <string name="date_filter">Selecionar Data</string>
 </resources>

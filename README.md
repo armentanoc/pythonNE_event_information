@@ -10,15 +10,19 @@
 
 <div align="center" display="flex">
 <img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/a005feb3-c386-4adb-a1df-3d51a8bb7a2b" height="500px">
-<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/9f7bad7c-1cfe-4209-bf8c-61f30d540b37" height="500px">
 </div>
-
-
 
 ## Features
 
-- Click direciona à página original do evento
-- WIP: Filters
+- Click redirects to original event page
+<div align="center" display="flex">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/9f7bad7c-1cfe-4209-bf8c-61f30d540b37" height="500px">
+</div>
+
+- [NEW] Date filter
+<div align="center" display="flex">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/bf0e78fa-4357-4f54-91ae-198f395da571" height="500px">
+</div>
 
 ## Requires
 

@@ -9,19 +9,24 @@
 <p>Android project that uses Android Studio and Gradle to create and build a Java application that consumes an API from Python Nordeste to display information related to the event in a RecyclerView. </p>
 
 <div align="center" display="flex">
-<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/a005feb3-c386-4adb-a1df-3d51a8bb7a2b" height="500px">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/f574ec1b-f0f9-43e1-accf-971f9e66acab" height="500px">
 </div>
 
 ## Features
 
 - Click redirects to original event page
 <div align="center" display="flex">
-<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/9f7bad7c-1cfe-4209-bf8c-61f30d540b37" height="500px">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/4edf3728-30de-4331-8683-c144fa900f77" height="500px">
 </div>
 
-- [NEW] Date filter
+- Date filter
 <div align="center" display="flex">
-<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/bf0e78fa-4357-4f54-91ae-198f395da571" height="500px">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/51619ead-d4d1-4c76-abf5-8a6b511594a0" height="500px">
+</div>
+
+- Participants information
+<div align="center" display="flex">
+<img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/240c5984-4f83-45b9-8a6d-5238920f9038" height="500px">
 </div>
 
 ## Requires

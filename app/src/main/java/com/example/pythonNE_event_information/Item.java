@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Item {
 
-    String title, type, language,start, duration, strRoom, url, strAbstract, personName, personBiography;
+    String title, type, language, start, duration, strRoom, url, strAbstract, personName, personBiography;
     int placeholder;
 
     Date date;

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import java.util.Calendar;
 
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -39,10 +40,10 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 public class MainActivity extends AppCompatActivity implements SelectListener {
-    List<Item> information = new ArrayList<>();
+    static List<Item> information = new ArrayList<>();
     RecyclerView recyclerView;
     Adapter adapter;
-    Button datePicker;
+    Button datePicker, seeSpeakersButton;
     ImageView removeFilterButton;
     private Date selectedDate = null;
     //Python NE API
@@ -77,6 +78,12 @@ public class MainActivity extends AppCompatActivity implements SelectListener {
             Button datePickerButton = findViewById(R.id.datePicker);
             datePickerButton.setText("Selecionar Data");
         });
+    }
+
+    // navigate to SpeakerActivity
+    public void navigateToSpeakerActivity(View view) {
+        Intent intent = new Intent(this, SpeakerActivity.class);
+        startActivity(intent);
     }
 
     //collects data from Python NE API

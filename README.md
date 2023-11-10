@@ -19,7 +19,7 @@
 <img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/4edf3728-30de-4331-8683-c144fa900f77" height="500px">
 </div>
 
-- Date filter
+- Date filter with fixed daterange according to the event
 <div align="center" display="flex">
 <img src="https://github.com/armentanoc/pythonNE_event_information/assets/88147887/51619ead-d4d1-4c76-abf5-8a6b511594a0" height="500px">
 </div>
